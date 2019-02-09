@@ -5,7 +5,7 @@ import requests, json
 
 def search_businesses(search_term, search_location):
 
-    api_key = "K2GTgs7ZgRQEXZ2_9BzfZO6pg_ijOuZ3vwG8fCljHGTmLrmU00fR5R8EEFHmH6qrzHg06BrXzIZ224bNL3qnwC7R4Sefmg6mwQUNaqt8fpyZvx2l_5JwKkuDythVXHYx"
+    api_key = "z6Ki-01wJkXzlDyFkdLMp-uhkqdC5ZnMJmQH2QdXfpYU3Z15zh5HbVhCM24LNiQ1BVib8rwP5PLMPATJblk3tuAVjfw_rp5w37w1SiXSKR1YXp0mOmCY-ZCVvotWW3Yx"
 
     url = "https://api.yelp.com/v3/businesses/search"
 
@@ -24,7 +24,8 @@ def search_businesses(search_term, search_location):
     businesses_dict = json.loads(businesses_object.text)
 
     businesses_list = businesses_dict['businesses']
-    #
+
+    print(businesses_dict)
     list_of_businesses = []
     for each in businesses_list:
         list_of_businesses.append(each)
